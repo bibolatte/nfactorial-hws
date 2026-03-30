@@ -26,9 +26,6 @@ def filter_even_numbers(my_list):
             new_list.append(n)
     return new_list
 
-number = [1, 2, 3, 4, 5, 6, 7, 8, 10]
-print(filter_even_numbers(number))
-
 
 #4 task
 from functools import reduce
