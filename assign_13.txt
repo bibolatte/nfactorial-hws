@@ -1,0 +1,109 @@
+#1 
+sateya2022@Macbook-Bibolatte ~ % python3 -m venv .venv
+
+sateya2022@Macbook-Bibolatte ~ % source .venv/bin/activate
+(.venv) sateya2022@Macbook-Bibolatte ~ % pip list
+Package Version
+------- -------
+pip     23.2.1
+(.venv) sateya2022@Macbook-Bibolatte ~ % deactivate
+sateya2022@Macbook-Bibolatte ~ % 
+
+
+#2 
+sateya2022@Macbook-Bibolatte ~ % python3 -m venv --system-site-packages env_system 
+
+sateya2022@Macbook-Bibolatte ~ % source env_system/bin/activate
+
+(env_system) sateya2022@Macbook-Bibolatte ~ % pip list
+Package             Version
+------------------- --------
+anyio               4.3.0
+certifi             2024.2.2
+charset-normalizer  3.3.2
+h11                 0.14.0
+httpcore            1.0.5
+httpx               0.27.0
+idna                3.7
+packaging           25.0
+pillow              10.3.0
+pip                 23.2.1
+pygame              2.5.2
+pyTelegramBotAPI    4.17.0
+pytesseract         0.3.13
+python-telegram-bot 21.1.1
+requests            2.31.0
+setuptools          69.1.1
+sniffio             1.3.1
+urllib3             2.2.1
+wheel               0.42.0
+
+[notice] A new release of pip is available: 23.2.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+
+
+#3 
+(env_system) sateya2022@Macbook-Bibolatte ~ % pip install requests numpy
+Requirement already satisfied: requests in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (2.31.0)
+Collecting numpy
+  Downloading numpy-2.4.4-cp312-cp312-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests) (2024.2.2)
+Downloading numpy-2.4.4-cp312-cp312-macosx_14_0_arm64.whl (5.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 5.2 MB/s  0:00:01
+Installing collected packages: numpy
+Successfully installed numpy-2.4.4
+
+(env_system) sateya2022@Macbook-Bibolatte ~ % pip list
+Package             Version
+------------------- --------
+anyio               4.3.0
+certifi             2024.2.2
+charset-normalizer  3.3.2
+h11                 0.14.0
+httpcore            1.0.5
+httpx               0.27.0
+idna                3.7
+numpy               2.4.4
+packaging           25.0
+pillow              10.3.0
+pip                 26.0.1
+pygame              2.5.2
+pyTelegramBotAPI    4.17.0
+pytesseract         0.3.13
+python-telegram-bot 21.1.1
+requests            2.31.0
+setuptools          69.1.1
+sniffio             1.3.1
+urllib3             2.2.1
+wheel               0.42.0
+
+(env_system) sateya2022@Macbook-Bibolatte ~ % pip freeze > requirements.txt
+
+
+#4
+mkdir my_new_project
+(env_system) sateya2022@Macbook-Bibolatte ~ % cd my_new_projec 
+cd: no such file or directory: my_new_projec
+(env_system) sateya2022@Macbook-Bibolatte ~ % cd my_new_project
+(env_system) sateya2022@Macbook-Bibolatte my_new_project % python3 -m venv .venv
+(env_system) sateya2022@Macbook-Bibolatte my_new_project % source .venv/bin/activate
+(.venv) sateya2022@Macbook-Bibolatte my_new_project % pip install -r requirements.txt
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+
+[notice] A new release of pip is available: 23.2.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+
+#5
+with open("test.txt", "w", encoding="utf-8") as file:
+    file.write("first line")
+    file.write("second line")
+    file.write("thrid line")
+
+
+#6
+with open("test.txt", "r", encoding="utf-8") as file:
+    for line in file:
+        print(line.strip())
