@@ -1,0 +1,53 @@
+sateya2022@Macbook-Bibolatte ~ % poetry new nf-hws
+Created package nf_hws in nf-hws
+
+sateya2022@Macbook-Bibolatte ~ % poetry init
+This command will guide you through creating your pyproject.toml config.
+
+poetry add requests numpy
+poetry show
+poetry update
+
+sateya2022@Macbook-Bibolatte nf-hws % git init
+Initialized empty Git repository in /Users/sateya2022/nf-hws/.git/
+sateya2022@Macbook-Bibolatte nf-hws % git add .
+sateya2022@Macbook-Bibolatte nf-hws % git commit -m "init commit with poetry"
+[main (root-commit) ac29147] init commit with poetry
+ 5 files changed, 314 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 poetry.lock
+ create mode 100644 pyproject.toml
+ create mode 100644 src/nf_hws/__init__.py
+ create mode 100644 tests/__init__.py
+sateya2022@Macbook-Bibolatte nf-hws % cd ..
+sateya2022@Macbook-Bibolatte ~ % rm -rf nf-hws       
+sateya2022@Macbook-Bibolatte ~ % git clone git remote add origin https://github.com/bibolatte/nfactorial-git
+
+sateya2022@Macbook-Bibolatte test-git % cd ~
+sateya2022@Macbook-Bibolatte ~ % poetry new ascii_project 
+Created package ascii_project in ascii_project
+sateya2022@Macbook-Bibolatte ~ % cd ascii_project
+sateya2022@Macbook-Bibolatte ascii_project % cd ascii_project
+cd: no such file or directory: ascii_project
+sateya2022@Macbook-Bibolatte ascii_project % poetry install  
+Creating virtualenv ascii-project-ByeND4Ha-py3.12 in /Users/sateya2022/Library/Caches/pypoetry/virtualenvs
+Updating dependencies
+Resolving dependencies... (0.1s)
+
+Writing lock file
+дальше только  много ошибок
+cd ~
+rm -rf ascii_project
+git clone <URL>
+cd ascii_project
+poetry install
+
+Installing the current project: ascii-project (0.1.0)
+sateya2022@Macbook-Bibolatte nfactorial-git % poetry run pytest
+============================= test session starts ==============================
+platform darwin -- Python 3.12.1, pytest-9.0.2, pluggy-1.6.0
+rootdir: /Users/sateya2022/nfactorial-git
+configfile: pyproject.toml
+collected 1 item                                                               
+
+tests/test_main.py .
